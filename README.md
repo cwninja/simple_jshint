@@ -1,12 +1,13 @@
-# Simple::Jshint
+# SimpleJSHint
 
-TODO: Write a gem description
+Wraps jshint.js in the simplest wrapper I could imagine.
+
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'simple-jshint'
+    gem 'simple_jshint'
 
 And then execute:
 
@@ -14,11 +15,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install simple-jshint
+    $ gem install simple_jshint
 
 ## Usage
 
-TODO: Write usage instructions here
+    require "simple_jshint"
+    result = SimpleJSHint.check("some('dodgy').javascript()\ncode;")
+    result.ok? # => false
+    result.length # => 2
+    result.first # => "Line 1: some('dodgy').javascript() : Error Missing semicolon.",
 
 ## Contributing
 
