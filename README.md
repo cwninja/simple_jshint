@@ -1,5 +1,4 @@
-# SimpleJSHint [![Build
-Status](https://secure.travis-ci.org/cwninja/simple_jshint.png)](http://travis-ci.org/cwninja/simple_jshint)
+# SimpleJSHint [![Build Status](https://secure.travis-ci.org/cwninja/simple_jshint.png)](http://travis-ci.org/cwninja/simple_jshint)
 
 
 Wraps jshint.js in the simplest wrapper I could imagine.
