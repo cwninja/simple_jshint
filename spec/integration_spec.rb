@@ -17,5 +17,10 @@ describe SimpleJSHint do
       result.should be_ok
       result.should == [ ]
     end
+
+    it "handles fatal errors (JSHINT.errors will have null as last element)" do
+      result = SimpleJSHint.check("<>")
+      result.last.should == "A fatal error occurred"
+    end
   end
 end

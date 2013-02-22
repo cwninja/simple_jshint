@@ -8,7 +8,11 @@ module SimpleJSHint
 
     def initialize(errors)
       super errors.map{|error|
-        "Line %i: %s : Error %s" % error.values_at("line", "evidence", "reason")
+        if error.nil?
+          "A fatal error occurred"
+        else
+          "Line %i: %s : Error %s" % error.values_at("line", "evidence", "reason")
+        end
       }
     end
 
